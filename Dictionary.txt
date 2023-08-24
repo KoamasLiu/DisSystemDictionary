@@ -1,0 +1,3 @@
+banana:A yellow fruit.
+apple:A fruit that is usually red or green.
+car:A four-wheeled vehicle.

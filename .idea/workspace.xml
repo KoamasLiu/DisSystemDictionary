@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36405f9b-d0da-4435-b9a6-f33299fc925a" name="Changes" comment="new one">
+      <change afterPath="$PROJECT_DIR$/Dictionary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DictionaryModify.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/Code/DisSystemDictionary",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -46,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692874436365</updated>
       <workItem from="1692874437522" duration="1044000" />
+      <workItem from="1692875594500" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="new one">
       <created>1692874675559</created>
