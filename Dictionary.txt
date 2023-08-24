@@ -1,3 +1,8 @@
-banana:A yellow fruit.
-apple:A fruit that is usually red or green.
-car:A four-wheeled vehicle.
+{
+    "banana": "A long curved fruit with a yellow skin and soft sweet flesh.",
+    "date": "The sweet brownish fruit of an Old World palm.",
+    "apple": "A round fruit with red, green, or yellow skin and a firm white flesh.",
+    "cherry": "A four-wheeled vehicle.",
+    "asb": "Abc.",
+    "elderberry": "The small dark blackish berry of either of two elder trees."
+}
