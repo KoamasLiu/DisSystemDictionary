@@ -44,7 +44,12 @@ public class DictionaryModify {
         while (Dictionary_Occupancy){
             wait();
         }
-        return entries.get(word);
+        String Message = entries.get(word);
+        if (Message == null){
+            return "Word not found";
+        }else{
+            return Message;
+        }
     }
 
     synchronized public String add(String word, String definition)
