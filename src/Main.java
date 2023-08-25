@@ -1,22 +1,16 @@
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.util.HashMap;
-import java.util.Map;
-
-
 import javax.net.ServerSocketFactory;
 
 public class Main {
     private static int port = 6666;
     private static int counter = 0;
     private static DictionaryModify sharedDict;
-
     static {
         try {
             sharedDict = new DictionaryModify("Dictionary.txt");
@@ -29,7 +23,6 @@ public class Main {
 
 
     public static void main(String[] args) throws JSONException, IOException, InterruptedException {
-
         ThreadsPool.RejectedExecutionHandler handler = (task, executor) -> {
             System.out.println("Task rejected: " + task);
         };
@@ -38,7 +31,6 @@ public class Main {
 
         try(ServerSocket server = factory.createServerSocket(port)) {
             System.out.println("Waiting for client connection-");
-
             while(true) {
                 Socket client = server.accept();
                 threadPool.execute(() -> serveClient(client,sharedDict));
@@ -53,9 +45,7 @@ public class Main {
     private static void serveClient(Socket client,DictionaryModify dict) {
         try (Socket clientSocket = client) {
             String getMessage;
-
             DataInputStream input = new DataInputStream(clientSocket.getInputStream());
-            // Output Stream
             DataOutputStream output = new DataOutputStream(clientSocket.getOutputStream());
             getMessage = input.readUTF();
             JSONObject jsonObject = new JSONObject(getMessage);
