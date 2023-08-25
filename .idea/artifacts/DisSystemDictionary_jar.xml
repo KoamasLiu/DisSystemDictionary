@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DisSystemDictionary:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DisSystemDictionary_jar</output-path>
+    <root id="archive" name="DisSystemDictionary.jar">
+      <element id="module-output" name="DisSystemDictionary" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/org.json-chargebee-1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
