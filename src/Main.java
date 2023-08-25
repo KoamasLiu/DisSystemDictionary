@@ -51,9 +51,6 @@ public class Main {
         try(Socket clientSocket = client) {
 
 
-
-
-
             DataInputStream input = new DataInputStream(clientSocket.getInputStream());
             // Output Stream
             DataOutputStream output = new DataOutputStream(clientSocket.getOutputStream());

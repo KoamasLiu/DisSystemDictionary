@@ -56,13 +56,13 @@ public class DictionaryModify {
         if (entries.containsKey(word)) {
             Dictionary_Occupancy = false;
             notifyAll();
-            return "Duplicate";
+            return "The words are already in the dictionary";
         }
         entries.put(word, definition);
         saveToFile();
         Dictionary_Occupancy = false;
         notifyAll();
-        return "Success";
+        return "The word has been successfully added to the dictionary";
     }
 
     synchronized public String remove(String word)
@@ -75,11 +75,11 @@ public class DictionaryModify {
             saveToFile();
             Dictionary_Occupancy = false;
             notifyAll();
-            return "Success";
+            return "The word has been successfully removed from the dictionary";
         }
         Dictionary_Occupancy = false;
         notifyAll();
-        return "Not found";
+        return "This word is not found in the dictionary";
     }
 
     synchronized public String update(String word, String definition)
@@ -91,12 +91,12 @@ public class DictionaryModify {
         if (!entries.containsKey(word)) {
             Dictionary_Occupancy = false;
             notifyAll();
-            return "Not found";
+            return "This word is not found in the dictionary";
         }
         entries.put(word, definition);
         saveToFile();
         Dictionary_Occupancy = false;
         notifyAll();
-        return "Success";
+        return "Dictionary has been updated";
     }
 }
