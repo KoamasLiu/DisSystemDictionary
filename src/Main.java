@@ -41,13 +41,7 @@ public class Main {
 
             while(true) {
                 Socket client = server.accept();
-                counter++;
-                System.out.println("Client "+counter+": Applying for connection!");
-
                 threadPool.execute(() -> serveClient(client,sharedDict));
-
-//                Thread t = new Thread(() -> serveClient(client));
-//                t.start();
             }
         }
         catch (IOException e) {
@@ -55,20 +49,6 @@ public class Main {
         }finally {
             threadPool.shutdown();  // shut down the thread pool gracefully
         }
-
-
-//        try {
-//            DictionaryModify dict = new DictionaryModify("Dictionary.txt");
-//            System.out.println(dict.query("apple"));   // Outputs: A fruit that is usually red or green.
-//            System.out.println(dict.add("banana", "A yellow fruit."));  // Outputs: Success
-//            System.out.println(dict.remove("book"));   // Outputs: Success
-//            System.out.println(dict.update("car", "A four-wheeled vehicle."));   // Outputs: Success
-//        } catch (IOException | InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (JSONException e) {
-//            throw new RuntimeException(e);
-//        }
-
     }
     private static void serveClient(Socket client,DictionaryModify dict) {
         try (Socket clientSocket = client) {
@@ -84,14 +64,15 @@ public class Main {
             switch (key) {
                 case "query":
                     String queryWord = jsonObject.getString("query");
-                    System.out.println(queryWord);
                     String queryAns = dict.query(queryWord);
                     output.writeUTF(queryAns);
                     break;
 
                 case "add":
-                    Map<String, String> addWord = new HashMap<>();
-                    output.writeUTF(dict.add(addWord.keySet().toString(), addWord.values().toString()));
+                    JSONObject addmessage = jsonObject.getJSONObject("add");
+                    String addword = addmessage.getString("word");
+                    String addmeaning = addmessage.getString("meaning");
+                    output.writeUTF(dict.add(addword,addmeaning));
                     break;
 
                 case "remove":
@@ -100,8 +81,10 @@ public class Main {
                     break;
 
                 case "update":
-                    Map<String, String> updateWord = new HashMap<>();
-                    output.writeUTF(dict.update(updateWord.keySet().toString(), updateWord.values().toString()));
+                    JSONObject updatemessage = jsonObject.getJSONObject("update");
+                    String updateword = updatemessage.getString("word");
+                    String updatemeaning = updatemessage.getString("meaning");
+                    output.writeUTF(dict.update(updateword,updatemeaning));
                     break;
             }
 
@@ -112,7 +95,5 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }

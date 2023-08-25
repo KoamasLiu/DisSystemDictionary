@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="36405f9b-d0da-4435-b9a6-f33299fc925a" name="Changes" comment="new change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DictionaryModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryModify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThreadsPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadsPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,8 @@
       <workItem from="1692887191375" duration="680000" />
       <workItem from="1692887888613" duration="3714000" />
       <workItem from="1692930547480" duration="3156000" />
-      <workItem from="1692944424422" duration="7509000" />
+      <workItem from="1692944424422" duration="8624000" />
+      <workItem from="1692961917546" duration="4512000" />
     </task>
     <task id="LOCAL-00001" summary="new one">
       <created>1692874675559</created>
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692938624984</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new change">
+      <created>1692952266440</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692952266440</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,17 +138,6 @@
     <MESSAGE value="new one" />
     <MESSAGE value="new change" />
     <option name="LAST_COMMIT_MESSAGE" value="new change" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DictionaryModify.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
