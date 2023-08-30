@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="DisSystemDictionary:jar" />
+      <artifact name="DisSystemDictionary:jar2" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36405f9b-d0da-4435-b9a6-f33299fc925a" name="Changes" comment="new change">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DisSystemDictionary_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DictionaryModify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryModify.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ThreadsPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadsPool.java" afterDir="false" />
@@ -83,7 +82,10 @@
       <workItem from="1692967917003" duration="1594000" />
       <workItem from="1692970120982" duration="1130000" />
       <workItem from="1692971273931" duration="57000" />
-      <workItem from="1692971337664" duration="1997000" />
+      <workItem from="1692971337664" duration="7505000" />
+      <workItem from="1693105609587" duration="309000" />
+      <workItem from="1693374241535" duration="2489000" />
+      <workItem from="1693376928415" duration="967000" />
     </task>
     <task id="LOCAL-00001" summary="new one">
       <created>1692874675559</created>
@@ -155,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692967489607</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new change">
+      <created>1692973653378</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692973653378</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

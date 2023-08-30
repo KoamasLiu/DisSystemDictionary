@@ -1,3 +1,8 @@
+/**
+ * Name: Haoyu Liu
+ * Student id: 1385415
+ */
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -18,8 +23,10 @@ public class Main {
         port = Integer.parseInt(args[0]);
         String dictionaryFilePath = args[1];
 
+
         // Initialize the shared dictionary.
         DictionaryModify sharedDict = new DictionaryModify(dictionaryFilePath);
+
 
         // Create a custom handler for rejected tasks in the thread pool.
         ThreadsPool.RejectedExecutionHandler handler = (task, executor) -> {

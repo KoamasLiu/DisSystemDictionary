@@ -1,6 +1,10 @@
+/**
+ * Name: Haoyu Liu
+ * Student id: 1385415
+ */
+
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.*;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,11 +28,19 @@ public class DictionaryModify {
     }
 
     /**
-     * Loads the dictionary entries from the file into the in-memory map.
+     * load or create file
      * @throws IOException
      * @throws JSONException
      */
     private void loadFromFile() throws IOException, JSONException {
+        File file = new File(filePath);
+
+        // Check if filePath is empty or if the file does not exist.
+        if (filePath.isEmpty() || !file.exists() || !file.isFile()) {
+            createEmptyJsonFile(file);
+            return;
+        }
+
         StringBuilder content = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -36,6 +48,8 @@ public class DictionaryModify {
                 content.append(line);
             }
         }
+
+        // Parse the content to JSON and populate the in-memory map.
         JSONObject jsonObject = new JSONObject(content.toString());
         Iterator<String> keys = jsonObject.keys();
         while (keys.hasNext()) {
@@ -43,6 +57,18 @@ public class DictionaryModify {
             entries.put(key, jsonObject.getString(key));
         }
     }
+
+    private void createEmptyJsonFile(File file) throws IOException {
+        if (!file.createNewFile()) {
+            throw new IOException("Failed to create a new file.");
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write("{}"); // Writes an empty JSON object to the file.
+            System.out.println(new File(".").getAbsolutePath());
+        }
+    }
+
 
     /**
      * Saves the in-memory map of dictionary entries back to the file.
